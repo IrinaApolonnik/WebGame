@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "webgame";
+  src: url("../fonts/TildaSans.ttf");
+  src: local("TildaSans-Regular"),
+  url("../fonts/TildaSans.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "webgame";
+  src: url("../fonts/YUNGA.otf");
+  src: local("YUNGA Display", "YUNGA"),
+  url("../fonts/YUNGA.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+}

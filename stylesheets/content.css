@@ -1,0 +1,410 @@
+html {
+  font-family: webgame;
+  width: 1440px;
+  height: 900px;
+  overflow: hidden;
+}
+body {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #FF7596;
+}
+.hide {
+  display: none;
+}
+.zero {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.second {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #FFDCE9;
+}
+.third {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: #E9FFE3;
+}
+.runningstroke p {
+  position: fixed;
+  top: 32.5%;
+  font-style: italic;
+  font-size: 4200%;
+  line-height: 374px;
+  color: #DEFFFF;
+  animation: text 8s linear -0.5s infinite;
+  transition: all .5s ease-out;
+}
+@keyframes text {
+  0% {transform: translateX(-1.389vw)}
+  100% {transform: translateX(-50%)}
+}
+.cat {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 36.250vw;
+  height: 80%;
+}
+.cat img {
+  width: 100%;
+  height: 100%;
+}
+.cat2 {
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+  width: 36.250vw;
+  height: 75%;
+  background: url('../images/cat3.svg');
+}
+.cat2 img:nth-of-type(1) {
+  width: 100%;
+  height: 100%;
+}
+.blush {
+  position: absolute;
+  width: 58%;
+  height: 37%;
+  bottom: 58%;
+  left: 27%;
+}
+.knopka1, .knopka2, .knopka3 {
+  position: absolute;
+  border-radius: 50%;
+  width: 23.125vw;
+  height: 23.125vw;
+  z-index: 0;
+}
+.knopka1 img, .knopka2 img, .knopka3 img {
+  position: absolute;
+  z-index: 1;
+}
+.knop1, .knop2, .knop3 {
+  position: absolute;
+  border-radius: 50%;
+  width: 23.125vw;
+  height: 23.125vw;
+  transition: all .3s ease-out;
+  z-index: 0;
+}
+.knop1 {
+  background: #FFF3E8;
+}
+.knop2 {
+  background: #FFDCE9;
+}
+.knop3 {
+  background: #E9FFE3;
+}
+.knopka1 {
+  top: -20%;
+  right: 10%;
+}
+.knopka2 {
+  top: 50%;
+  margin-top: -11.5%;
+  right: 25%;
+}
+.knopka2 img {
+  overflow: scroll;
+  width: 33%;
+  height: 33%;
+}
+.knopka2 img:nth-of-type(1) {
+  position: absolute;
+  top: 25%;
+  right: 19%;
+}
+.knopka2 img:nth-of-type(2) {
+  position: absolute;
+  top: 25%;
+  left: 19%;
+}
+.knopka2 img:nth-of-type(3) {
+  position: absolute;
+  top: 49%;
+  left: 33%;;
+}
+.knopka3 {
+  bottom: -20%;
+  right: 10%;
+
+}
+.knopka3 img {
+  overflow: scroll;
+  width: 31%;
+  height: 31%;
+}
+.knopka3 img:nth-of-type(1) {
+  position: absolute;
+  top: 18%;
+  left: 35%;
+}
+.knopka3 img:nth-of-type(2) {
+  position: absolute;
+  top: 45%;
+  left: 17%;
+}
+.knopka3 img:nth-of-type(3) {
+  position: absolute;
+  top: 48%;
+  right: 19%;
+  transform: rotate(90deg);
+}
+.nekocat {
+  position: absolute;
+  top: 50%;
+  margin-top: -17%;
+  left:37%;
+  width: 24vw;
+  height: 39.167vw;
+  z-index: 1;
+}
+.nekocat img:nth-of-type(1) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.nekocat img:nth-of-type(2) {
+  position: absolute;
+  width: 28%;
+  height: 100%;
+  top: -2%;
+  left: -3%
+}
+.nekocat img:nth-of-type(3) {
+  display: none;
+  position: absolute;
+  width: 35%;
+  height: 30%;
+  top: 39.5%;
+  left: -3%;
+}
+.yen {
+  position: absolute;
+  width: 15vw;
+  height: 15vw;
+}
+.yen img {
+  width: 100%;
+  height: 100%;
+}
+.back, .help {
+  position: absolute;
+  border-radius: 50%;
+  width: 6vw;
+  height: 6vw;
+  background: #FF7596;
+  display: flex;
+  justify-content: center;
+}
+.back {
+  left: 1%;
+  bottom: 2%;
+}
+.help {
+  left: 8%;
+  bottom: 2%;
+}
+.back img{
+  height: 100%;
+  width: 75%;
+}
+.help img{
+  height: 100%;
+  width: 45%;
+}
+.tree {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 65.625vw;
+  height: 40.556vw;
+}
+.tree img {
+  width: 100%;
+  height: 100%;
+}
+.sakura img {
+  position: absolute;
+  width: 4.7vw;
+  height: 4.7vw;
+}
+.sakura img:nth-of-type(1) {
+  top: 10vw;
+  right: 10vw;
+}
+.sakura img:nth-of-type(2) {
+  top: 10vw;
+  right: 0vw;
+}
+.sakura img:nth-of-type(3) {
+  top: -1vw;
+  right: 42vw;
+}
+.sakura img:nth-of-type(4) {
+  top: 5vw;
+  right: 54vw;
+}
+.sakura img:nth-of-type(5) {
+  top: 6vw;
+  right: 51vw;
+}
+.sakura img:nth-of-type(6) {
+  top: 19vw;
+  right: 38vw;
+}
+.sakura img:nth-of-type(7) {
+  top: 16vw;
+  right: 40vw;
+}
+.sakura img:nth-of-type(8) {
+  top: 5vw;
+  right: 41vw;
+}
+.sakura img:nth-of-type(9) {
+  top: 1vw;
+  right: 1vw;
+}
+.sakura img:nth-of-type(10) {
+  top: -2vw;
+  right: 25vw;
+}
+.sakura img:nth-of-type(11) {
+  top: 21vw;
+  right: 54vw;
+}
+.sakura img:nth-of-type(12) {
+  top: 18vw;
+  right: 49vw;
+}
+.sakura img:nth-of-type(13) {
+  top: -2vw;
+  right: 7vw;
+}
+.sakura img:nth-of-type(14) {
+  top: 1vw;
+  right: 10vw;
+}
+.sakura img:nth-of-type(15) {
+  top: 3vw;
+  right: 7vw;
+}
+.sakura img:nth-of-type(16) {
+  top: 0vw;
+  right: 22vw;
+}
+.sakura img:nth-of-type(17) {
+  top: 4vw;
+  right: 0vw;
+}
+.sakura img:nth-of-type(18) {
+  top: 15vw;
+  right: 1vw;
+}
+.sakura img:nth-of-type(19) {
+  top: 4vw;
+  right: 27vw;
+}
+.sakura img:nth-of-type(20) {
+  top: 7vw;
+  right: 12vw;
+}
+.sakura img:nth-of-type(21) {
+  top: 13vw;
+  right: 25vw;
+}
+.sakura img:nth-of-type(22) {
+  top: -3vw;
+  right: 37vw;
+}
+.sakura img:nth-of-type(23) {
+  top: 8vw;
+  right: 55vw;
+}
+.sakura img:nth-of-type(24) {
+  top: 24vw;
+  right: 57vw;
+}
+.sakura img:nth-of-type(25) {
+  top: 16vw;
+  right: 56vw;
+}
+.sakura img:nth-of-type(26) {
+  top: 10vw;
+  right: 49vw;
+}
+.sakura img:nth-of-type(27) {
+  top: 9vw;
+  right: 6vw;
+}
+.sakura img:nth-of-type(28) {
+  top: 7vw;
+  right: 31vw;
+}
+.sakura img:nth-of-type(29) {
+  top: 6vw;
+  right: 19vw;
+}
+.sakura img:nth-of-type(30) {
+  top: 13vw;
+  right: 51vw;
+}
+.sakura img:nth-of-type(31) {
+  top: 3vw;
+  right: 23vw;
+}
+.sakura img:nth-of-type(32) {
+  top: -1vw;
+  right: 14vw;
+}
+.sakura img:nth-of-type(33) {
+  top: 13vw;
+  right: 63vw;
+}
+.sakura img:nth-of-type(34) {
+  top: 17vw;
+  right: 53vw;
+}
+.sakura img:nth-of-type(35) {
+  top: 12vw;
+  right: 14vw;
+}
+.sakura img:nth-of-type(36) {
+  top: 15vw;
+  right: 28vw;
+}
+.sakura img:nth-of-type(37) {
+  top: 26vw;
+  right: 53vw;
+}
+.sakura img:nth-of-type(38) {
+  top: 18vw;
+  right: 43vw;
+}
+.sakura img:nth-of-type(39) {
+  top: 15vw;
+  right: 45vw;
+}
+.sakura img:nth-of-type(40) {
+  top: 24vw;
+  right: 50vw;
+}
+.sakura img:nth-of-type(41) {
+  top: 0vw;
+  right: 38vw;
+}
+.sakura img:nth-of-type(42) {
+  top: 14vw;
+  right: 57vw;
+}
