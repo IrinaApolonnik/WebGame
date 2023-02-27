@@ -10,6 +10,7 @@ body {
   height: 100%;
   overflow: hidden;
   background: #FF7596;
+  transition: all 0.7s ease-out;
 }
 .hide {
   display: none;
@@ -25,14 +26,12 @@ body {
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #FFDCE9;
 }
 .third {
   position: absolute;
   width: 100%;
   height: 100%;
   overflow: hidden;
-  background: #E9FFE3;
 }
 .runningstroke p {
   position: fixed;
@@ -81,9 +80,10 @@ body {
 .knopka1, .knopka2, .knopka3 {
   position: absolute;
   border-radius: 50%;
-  width: 23.125vw;
-  height: 23.125vw;
+  width: 20.833vw;
+  height: 20.833vw;
   z-index: 0;
+  transition: all .3s ease-out;
 }
 .knopka1 img, .knopka2 img, .knopka3 img {
   position: absolute;
@@ -92,8 +92,8 @@ body {
 .knop1, .knop2, .knop3 {
   position: absolute;
   border-radius: 50%;
-  width: 23.125vw;
-  height: 23.125vw;
+  width: 20.833vw;
+  height: 20.833vw;
   transition: all .3s ease-out;
   z-index: 0;
 }
@@ -138,7 +138,6 @@ body {
 .knopka3 {
   bottom: -20%;
   right: 10%;
-
 }
 .knopka3 img {
   overflow: scroll;
@@ -192,6 +191,7 @@ body {
 }
 .yen {
   position: absolute;
+  top: 0vw;
   width: 15vw;
   height: 15vw;
 }
@@ -199,30 +199,45 @@ body {
   width: 100%;
   height: 100%;
 }
-.back, .help {
+.back1, .help1, .back2, .help2, .back3, .help3 {
+  position: absolute;
+  border-radius: 50%;
+  width: 6vw;
+  height: 6vw;
+  display: flex;
+  justify-content: center;
+  transition: all .3s ease-out;
+}
+.backy1, .helpy1, .backy2, .helpy2, .backy3, .helpy3 {
   position: absolute;
   border-radius: 50%;
   width: 6vw;
   height: 6vw;
   background: #FF7596;
-  display: flex;
-  justify-content: center;
+  z-index: 0;
+  transition: all .3s ease-out;
 }
-.back {
+.back1, .back2, .back3 {
   left: 1%;
   bottom: 2%;
 }
-.help {
+.help1, .help2, .help3 {
   left: 8%;
   bottom: 2%;
 }
-.back img{
+.back1 img, .help1 img, .back2 img, .help2 img, .back3 img, .help3 img {
+  z-index: 1;
+}
+.back1 img, .back2 img, .back3 img{
   height: 100%;
   width: 75%;
 }
-.help img{
+.help1 img, .help2 img, .help3 img{
   height: 100%;
   width: 45%;
+}
+.counter {
+  position: absolute;
 }
 .tree {
   position: absolute;

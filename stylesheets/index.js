@@ -1,66 +1,121 @@
 $(document).ready(function(){
 	$(".knopka1").click(function(){
 		$("body").css("background-color", "#FFF3E8" );
+		$(".knop1").toggleClass("knop");
+		$(".first").toggleClass("show");
+		$(".first").toggleClass("hide");
+		setTimeout(function(){
+			$(".knop1").toggleClass("knop");
+		}, 1200);
 	});
-	$(".knopka1").click(function(){
-		$(".knop1").css("animation-play-state", "running" );
-	});
+
 	$(".knopka2").click(function(){
 		$("body").css("background-color", "#FFDCE9" );
+		$(".knop2").toggleClass("knop");
+		$(".second").toggleClass("show");
+		$(".second").toggleClass("hide");
+		setTimeout(function(){
+			$(".knop2").toggleClass("knop");
+		}, 1200);
 	});
-	$(".knopka2").click(function(){
-		$(".knop2").css("animation-play-state", "running" );
-	});
+
 	$(".knopka3").click(function(){
 		$("body").css("background-color", "#E9FFE3" );
+		$(".knop3").toggleClass("knop");
+		$(".third").toggleClass("show");
+		$(".third").toggleClass("hide");
+		setTimeout(function(){
+			$(".knop3").toggleClass("knop");
+		}, 1200);
 	});
-	$(".knopka3").click(function(){
-		$(".knop3").css("animation-play-state", "running" );
-	});
+
 	$(".knopka1, .knopka2, .knopka3").click(function(){
 		$(".runningstroke p").css("color", "#FF7596" );
 		$(this).css("z-index","2");
-		$(".zero").css("animation-play-state", "running" );
+		$(".zero").toggleClass("show");
+		$(".zero").toggleClass("opac");
 		setTimeout(function(){
-			$(".zero").addClass("hide");
+			$(".zero").toggleClass("opac");
+			$(".zero").toggleClass("hide");
+			$(this).css("z-index","0");
 		}, 1200);
+		});
 
+	$(".back1").click(function(){
+		$(this).css("z-index","2");
+		$(".backy1").toggleClass("backy");
+		$(".first").toggleClass("show");
+		$(".first").toggleClass("opac");
+		$(".runningstroke p").css("color", "#DEFFFF" );
+		$("body").css("background-color", "#FF7596" );
+		setTimeout(function(){
+			$(".backy1").toggleClass("backy");
+			$(".first").toggleClass("hide");
+			$(".first").toggleClass("opac");
+			$(this).css("z-index","0");
+		}, 1200);
+		$(".zero").toggleClass("hide");
+		$(".zero").toggleClass("show");
 	});
-	// $(".knopka2").click(function(){
-	// 	$(".knop2").css("animation-play-state", "running" );
-	// });
-	// $(".knopka1, .knopka2, .knopka3").click(function(){
-	//       		setTimeout(function(){
-	//             $(".zero").addClass("hide");
-	//           }, 1100);
-	//       	});
-	// $(".knopka1, .knopka2, .knopka3").click(function(){
-	// 	$(".zero").addClass("hide");
-	// });
-	// $(".knopka1").click(function(){
-	// 	$("section:nth-of-type(2)").removeClass("hide");
-	// });
-  // $(".back").click(function(){
-	// 	$("section:nth-of-type(2)").addClass("hide");
-	// });
-  // $(".knopka2").click(function(){
-  //   $("section:nth-of-type(3)").removeClass("hide");
-  // });
-  // $(".back").click(function(){
-  //   $("section:nth-of-type(3)").addClass("hide");
-  // });
-  // $(".knopka3").click(function(){
-  //   $("section:nth-of-type(4)").removeClass("hide");
-  // });
-  // $(".back").click(function(){
-  //   $("section:nth-of-type(4)").addClass("hide");
-  // });
-  // $(".cat").click(function(){
-  //   $(".cat").addClass("hide");
-  //   $(".cat2").removeClass("hide");
-  // });
-  // $(".cat2").click(function(){
-  //   $(".cat2").addClass("hide");
-  //   $(".cat").removeClass("hide");
-  // });
+
+	$(".back2").click(function(){
+		$(this).css("z-index","2");
+		$(".backy2").toggleClass("backy");
+		$(".second").toggleClass("show");
+		$(".second").toggleClass("opac");
+		$(".runningstroke p").css("color", "#DEFFFF" );
+		$("body").css("background-color", "#FF7596" );
+		setTimeout(function(){
+			$(".backy2").toggleClass("backy");
+			$(".second").toggleClass("hide");
+			$(".second").toggleClass("opac");
+			$(this).css("z-index","0");
+		}, 1200);
+		$(".zero").toggleClass("hide");
+		$(".zero").toggleClass("show");
+	});
+
+	$(".back3").click(function(){
+		$(this).css("z-index","2");
+		$(".backy3").toggleClass("backy");
+		$(".third").toggleClass("show");
+		$(".third").toggleClass("opac");
+		$(".runningstroke p").css("color", "#DEFFFF" );
+		$("body").css("background-color", "#FF7596" );
+		setTimeout(function(){
+			$(".backy3").toggleClass("backy");
+			$(".third").toggleClass("hide");
+			$(".third").toggleClass("opac");
+			$(this).css("z-index","0");
+		}, 1200);
+		$(".zero").toggleClass("hide");
+		$(".zero").toggleClass("show");
+	});
+
+	$(".nekocat").click(function(){
+		$(".coinx").css("animation-play-state", "paused" );
+		$(".yen").toggleClass("coiny" );
+		$(".nekocat img:nth-of-type(2)").css("display", "none" );
+		$(".nekocat img:nth-of-type(3)").css("display", "block" );
+		setTimeout(function(){
+			$(".nekocat img:nth-of-type(3)").css("display", "none" );
+			$(".nekocat img:nth-of-type(2)").css("display", "block" );
+			$(".coinx").css("animation-play-state", "running");
+			$(".yen").toggleClass("coiny" );
+		}, 1200);
+	});
+
+  $(".cat").click(function(){
+    $(".cat").addClass("hide");
+    $(".cat2").removeClass("hide");
+  });
+
+  $(".cat2").click(function(){
+    $(".cat2").addClass("hide");
+    $(".cat").removeClass("hide");
+  });
+
+	$(".sakura img").click(function(){
+		$(this).addClass("fall");
+	});
 });
