@@ -1,4 +1,4 @@
-.knopka1 img:hover ~ .knop1, .knop1:hover, .knopka2 img:hover ~ .knop2, .knop2:hover, .knopka3 img:hover, .knop3:hover{
+.knopka1 img:hover ~ .knop1, .knop1:hover, .knopka2 img:hover ~ .knop2, .knop2:hover, .knopka3 img:hover ~ .knop3, .knop3:hover{
   transform: scale(1.05);
   transition: all .3s ease-out;
 }
@@ -6,14 +6,16 @@
   transform: scale(1.05);
   transition: all .3s ease-out;
 }
-.help3 img:hover ~ .helpy3, .helpy3:hover {
+.help3 img:hover ~ .helpy3, .helpy3:hover, .tablet3 img:hover {
   transform: scale(1.05);
   transition: all .3s ease-out;
 }
 .knop {
   animation: knopka 2s linear;
-  /* animation: blobee 15s ease infinite; */
 }
+/* .knop1, .knop2, .knop3 {
+  animation: blobee 15s ease infinite;
+} */
 @keyframes knopka {
   0% {}
   100% {transform: scale(13); }
@@ -39,12 +41,11 @@
 }
 @keyframes show {
   0% {opacity: 0}
-  20% {opacity: 0}
   70%{opacity: 0}
   100% {opacity: 1}
 }
 .coinx {
-  animation: coinx 2s alternate infinite linear;
+  animation: coinx 0.5s alternate infinite linear;
 }
 .coiny {
   animation: coiny 2s normal forwards linear;
@@ -55,7 +56,7 @@
 }
 @keyframes coiny {
   0% {}
-  100% {transform: rotate(90deg); top: 100%;}
+  100% {top: 120%; transform: rotate(90deg); }
 }
 .sakura img {
   transition: all .1s ease-out;

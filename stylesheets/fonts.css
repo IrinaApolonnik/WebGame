@@ -14,3 +14,11 @@
   font-weight: 400;
   font-style: italic;
 }
+@font-face {
+  font-family: "webgame_1";
+  src: url("../fonts/Pilowlava.otf");
+  src: local("Pilowlava-Regular", "Pilowlava"),
+  url("../fonts/Pilowlava.otf") format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}

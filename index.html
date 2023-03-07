@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
-  <title>ni_shipi_game</title>
-  <link rel="icon" type="image/x-icon" href="images/icon.ico" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-  <script type="text/javascript" src="stylesheets/index.js">
-  </script>
-  </script>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
+    <title>ni_shipi_game</title>
+    <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script type="text/javascript" src="java/index.js"></script>
+    <script src="java/jquery-3.6.3.js"></script>
+  </head>
   <body>
     <div class="runningstroke">
       <p>помурчимпомурчим</p>
@@ -17,9 +18,12 @@
     <div class="cat">
       <img src="images/cat.svg" alt="">
     </div>
+    <div class="cat3 hide">
+      <img src="images/cat3.svg" alt="">
+    </div>
     <div class="cat2 hide">
       <img src="images/cat2.svg" alt="">
-      <img class="blush" src="images/blush2.svg" alt="">
+      <img id="blush" src="images/blush2.svg" alt="">
     </div>
     <div class="knopka1">
       <div class="knop1"></div>
@@ -46,6 +50,11 @@
       <img src="images/help.svg" alt="">
       <div class="helpy1"></div>
     </div>
+    <div class="tablet hide">
+      <div class="tablet1"><h2>таблички эма</h2> </div>
+      <div class="tablet2"><h3>напиши свои мечты или пожелания!</h3> </div>
+      <div class="tablet3"><img src="images/close.svg" alt=""> </div>
+    </div>
   </section>
   <section class="second hide">
     <div class="nekocat">
@@ -53,8 +62,10 @@
       <img src="images/paw1.svg" alt="">
       <img src="images/paw2.svg" alt="">
     </div>
-    <div class="yen coinx">
-      <img src="images/yen.svg" alt="">
+    <div class="yen ">
+      <div class="yeny coinx">
+        <img src="images/yen.svg" alt="">
+      </div>
     </div>
     <div class="back2">
       <img src="images/arrow.svg" alt="">
@@ -63,6 +74,11 @@
     <div class="help2">
       <img src="images/help.svg" alt="">
       <div class="helpy2"></div>
+    </div>
+    <div class="tablet hide">
+      <div class="tablet1"><h2>манэки-нэко</h2> </div>
+      <div class="tablet2"><h3>кликни по кошечке нэко <br>и заработай йены удачи!</h3> </div>
+      <div class="tablet3"> <img src="images/close.svg" alt=""> </div>
     </div>
   </section>
   <section class="third hide">
@@ -112,6 +128,16 @@
       <img src="images/sakura5.svg" alt="">
       <img src="images/sakura5.svg" alt="">
       <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
+      <img src="images/sakura5.svg" alt="">
     </div>
     <div class="back3">
       <img src="images/arrow.svg" alt="">
@@ -121,8 +147,13 @@
       <img src="images/help.svg" alt="">
       <div class="helpy3"></div>
     </div>
-    <div class="counter">
-      <p>1/4</p>
+    <div class="count_sak">
+      <h4 id="count_sak">1/4</h4>
+    </div>
+    <div class="tablet hide">
+      <div class="tablet1"><h2>сакура удачи</h2> </div>
+      <div class="tablet2"><h3>найди все четырехлистные цветы и прокачай удачу!</h3> </div>
+      <div class="tablet3"><img src="images/close.svg" alt=""> </div>
     </div>
   </section>
   </body>

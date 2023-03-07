@@ -92,6 +92,23 @@ $(document).ready(function(){
 		$(".zero").toggleClass("show");
 	});
 
+	$(".help2, .help1, .help3").click(function(){
+		$(".tablet").toggleClass("show");
+		$(".tablet").toggleClass("hide");
+		setTimeout(function(){
+			$(".tablet").toggleClass("show");
+		}, 1200);
+	});
+
+	$(".tablet3").click(function(){
+		$(".tablet").toggleClass("opac");
+		setTimeout(function(){
+			$(".tablet").toggleClass("hide");
+			$(".tablet").toggleClass("opac");
+		}, 1200);
+	});
+
+ // взаимодействие с кошкой удачи
 	$(".nekocat").click(function(){
 		$(".coinx").css("animation-play-state", "paused" );
 		$(".yen").toggleClass("coiny" );
@@ -105,16 +122,28 @@ $(document).ready(function(){
 		}, 1200);
 	});
 
+	// взаимодействие с котиком на главной страничке
   $(".cat").click(function(){
     $(".cat").addClass("hide");
     $(".cat2").removeClass("hide");
+
   });
 
+	// появление румяных щечек
   $(".cat2").click(function(){
-    $(".cat2").addClass("hide");
-    $(".cat").removeClass("hide");
+		$("#blush").css({
+			opacity: function(index, value) {
+				if (value < 1) {
+					return parseFloat (value) +0.1;
+				}
+				else {
+					$(".cat2").addClass("hide");
+			    $(".cat3").removeClass("hide");
+				}
+			}
+		});
   });
-
+	// падающие цветы сакуры
 	$(".sakura img").click(function(){
 		$(this).addClass("fall");
 	});
