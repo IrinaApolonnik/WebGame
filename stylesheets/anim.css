@@ -44,19 +44,27 @@
   70%{opacity: 0}
   100% {opacity: 1}
 }
+.show-tablet {
+  animation: show-tablet 2s linear;
+}
+@keyframes show-tablet {
+  0% {opacity: 0}
+  60% {opacity: 1}
+  100% {opacity: 1}
+}
 .coinx {
   animation: coinx 0.5s alternate infinite linear;
 }
 .coiny {
-  animation: coiny 2s normal forwards linear;
+  animation: coiny 1.5s normal forwards linear;
 }
 @keyframes coinx {
   0% {transform: translateX(-10vw)}
   100% {transform: translateX(90vw);}
 }
 @keyframes coiny {
-  0% {}
-  100% {top: 120%; transform: rotate(90deg); }
+  0% {top: 0; transform: rotate(0deg);}
+  100% {top: 120%; transform: rotate(180deg); }
 }
 .sakura img {
   transition: all .1s ease-out;
