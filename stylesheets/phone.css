@@ -1,8 +1,8 @@
-@media only screen and (max-width:390px) {
+@media only screen and (max-width:499px) {
   html {
     font-family: webgame;
-    width: 390px;
-    height: 884px;
+    width:100%;
+    height: 100%;
     overflow: hidden;
     cursor: url('../images/pawcursor.svg'), auto;
   }
@@ -63,7 +63,7 @@
   .runningstroke {
     position: absolute;
     top: 50%;
-    margin-top: -180vw;
+    margin-top: -70vw;
     font-style: italic;
     font-size: 120vw;
     line-height: 374px;
@@ -182,10 +182,10 @@
   }
   .ok0 {
     position:absolute;
-    width: 400%;
-    top:-150%;
-    left:-150%;
-    height: 700%;
+    width: 600%;
+    top:-200%;
+    left:-200%;
+    height:800%;
     background:#FF7596;
     opacity: 0.8;
   }
