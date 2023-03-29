@@ -237,7 +237,7 @@ $(document).ready(function(){
 		let countc = 0;
         $(".nekocat").click(function () {
           countc += 1;
-          if (countc == 14) {
+          if (countc == 21) {
 						$( ".nekocat").unbind( "click" );
 						$('.ok').toggleClass("hide");
 						$('.ok').toggleClass("show-tablet");
@@ -252,7 +252,7 @@ $(document).ready(function(){
 		$(document).keypress(function(e) {
 			if(e.which == 13) {
 					counte += 1;
-					if (counte == 4) {
+					if (counte == 7) {
 						$( document).unbind( "keypress" );
 						$('.ok').toggleClass("hide");
 						$('.ok').toggleClass("show-tablet");

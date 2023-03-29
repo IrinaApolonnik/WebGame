@@ -18,38 +18,53 @@
     transition: all 0.7s ease-out;
 
   }
+  /* моё имячко */
   #me {
     position: absolute;
-    top: 1%;
-    left: 1%;
-    font-size: 1.4vw;
+    bottom: 1%;
+    left:45%;
+    font-size: 1.3vw;
     font-style: normal;
     color: #F05A7E;
   }
+  /* класс с отключением блоков */
   .hide {
     display: none;
   }
-  .zero {
+  /* все блоки */
+  .zero, .first, .second, .third, .open {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
-  .second {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+  /* блок открывашка */
+  .open {
+    background-color: #FF7596;
+    z-index: 4;
   }
-  .third {
+  /* логотипчек */
+  .logo {
     position: absolute;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
+    width: 20%;
+    height: 30%;
+    top: 35%;
+    left: 40%;
+
   }
+  .sca {
+    animation: 2s logo linear infinite;
+  }
+  @keyframes logo {
+    0% {transform: scale(1); opacity: 0.8;}
+    50% {transform: scale(1.1); opacity: 1;}
+    100% {transform: scale(1); opacity: 0.8;}
+  }
+  /* бегущая строчка */
   .runningstroke {
     position: absolute;
-    top: 28.5%;
+    top: 50%;
+    margin-top: -35vw;
     font-style: italic;
     font-size: 37vw;
     line-height: 374px;
@@ -61,73 +76,7 @@
     0% {transform: translateX(-1.389vw)}
     100% {transform: translateX(-50%)}
   }
-  .cat img:nth-of-type(1) {
-    position: absolute;
-    z-index: 0;
-        /* !!!!!!!!! */
-  }
-  .cat img:nth-of-type(2) {
-    position: absolute;
-    z-index: 2;
-  }
-  .look {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    z-index: 1;
-      /* !!!!!!!!! */
-  }
-  .eye {
-    position: absolute;
-    bottom: 72%;
-    left:43%;
-    border-radius: 50%;
-    height: 3vw;
-    width: 3vw;
-    /* background: #CCC; */
-  }
-  .eye:nth-of-type(2) {
-    bottom: 75%;
-    left:67%;
-  }
-  .eye:after {
-    position: absolute;
-    bottom: 1vw;
-    right: 0vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background: #FF7596;
-    border:0.8vw solid #E9FFE3;
-    border-radius: 50%;
-    content: " ";
-  }
-  .cat, .cat2, .cat3 {
-    position: absolute;
-    bottom: -1vw;
-    left: 7%;
-    width: 26.319vw;
-    height: 44.031vw;
-    /* !!!!!!!!! */
-  }
-  .cat img, .cat3 img {
-    width: 100%;
-    height: 100%;
-  }
-
-  .cat2 img:nth-of-type(1) {
-    width: 100%;
-    height: 100%;
-  }
-  #blush {
-    position: absolute;
-    width: 17vw;
-    height: 4.885vw;
-    bottom: 68%;
-    left: 28%;
-    transition: all .3s ease-out;
-    opacity: 0;
-  }
+  /* кнопочки к блокам */
   .knopka1, .knopka2, .knopka3 {
     position: absolute;
     border-radius: 50%;
@@ -229,171 +178,7 @@
     right: 19%;
     transform: rotate(90deg);
   }
-
-  .ema {
-    position: absolute;
-    top:-12%;
-    left:50%;
-    margin-left: -8.94vw;
-    height: 55.681vw;
-    width: 17.885vw;
-  }
-  .ema img {
-    width: 100%;
-    height:100%;
-  }
-  /* .vvod {
-    left: 5%;
-    width: 90%;
-    height: 40%;
-    background-color: transparent;
-    border: none;
-  } */
-  /* .activeelement {
-    border: none;
-  } */
-
-  .wish {
-    position: absolute;
-    top: 46%;
-    left: 8%;
-    width: 14.8vw;
-    height: 17vw;
-    background-color: transparent;
-    border: none;
-    font-size: 2vw;
-    line-height: 3vw;
-    color: #FF7596;
-    font-style: normal;
-  }
-  /* .back_ema {
-    position: absolute;
-  } */
-  .back_ema img {
-    position: absolute;
-  }
-  .back_ema img:nth-of-type(1) {
-    width: 100%;
-    top: 0;
-    left: 0;
-  }
-  .back_ema img:nth-of-type(2) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 6vw;
-    left:7%;
-
-  }
-  .back_ema img:nth-of-type(3) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 8vw;
-    left:15%;
-  }
-  .back_ema img:nth-of-type(4) {
-    width: 3vw;
-    height: 6vw;
-    top: 10vw;
-    left:34%;
-  }
-  .back_ema img:nth-of-type(5) {
-    width: 2vw;
-    height:4vw;
-    top: 4vw;
-    left:2%;
-  }
-  .back_ema img:nth-of-type(6) {
-    width: 2vw;
-    height: 5.5vw;
-    top: 11.5vw;
-    left: 43%;
-  }
-  .back_ema img:nth-of-type(7) {
-    width: 4vw;
-    height: 6vw;
-    top: 9.5vw;
-    left:24%;
-  }
-  .back_ema img:nth-of-type(8) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 11.5vw;
-    left:53%;
-  }
-  .back_ema img:nth-of-type(9) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 9.5vw;
-    left:71%;
-  }
-  .back_ema img:nth-of-type(10) {
-    width: 3vw;
-    height: 6vw;
-    top: 8.5vw;
-    left:78%;
-  }
-  .back_ema img:nth-of-type(11) {
-    width: 2vw;
-    height:4vw;
-    top: 10.5vw;
-    left:62%;
-  }
-  .back_ema img:nth-of-type(12) {
-    width: 2.5vw;
-    height: 6vw;
-    top: 4vw;
-    left:96%;
-  }
-  .back_ema img:nth-of-type(13) {
-    width: 4vw;
-    height: 6vw;
-    top: 6.5vw;
-    left:87%;
-  }
-  .nekocat {
-    position: absolute;
-    top: 50%;
-    margin-top: -17%;
-    left:38%;
-    width: 24vw;
-    height: 39.167vw;
-    z-index: 1;
-  }
-  .nekocat img:nth-of-type(1) {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .nekocat img:nth-of-type(2) {
-    position: absolute;
-    width: 28%;
-    height: 100%;
-    top: -2%;
-    left: -3%
-  }
-  .nekocat img:nth-of-type(3) {
-    display: none;
-    position: absolute;
-    width: 35%;
-    height: 30%;
-    top: 39.5%;
-    left: -3%;
-  }
-  .yen {
-    position: absolute;
-    top: -15vw;
-    width: 15vw;
-    height: 15vw;
-  }
-  .yeny{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-  }
-  .yen img {
-    width: 100%;
-    height: 100%;
-  }
+  /* кнопочки назад и памагити */
   .back1, .help1, .back2, .help2, .back3, .help3 {
     position: absolute;
     border-radius: 50%;
@@ -433,6 +218,7 @@
     height: 100%;
     width: 45%;
   }
+  /* плашечки с уведомлениями */
   .tablet, .ok {
     position: absolute;
     height: 18.611vw;
@@ -441,9 +227,17 @@
     left: 50%;
     margin-left: -17.5vw;
     bottom: 16vw;
-    z-index: 2;
+    z-index: 3;
   }
-
+  .ok0 {
+    position:absolute;
+    width: 400%;
+    top:-150%;
+    left:-150%;
+    height: 400%;
+    background:#FF7596;
+    opacity: 0.8;
+  }
   .tablet1, .ok1 {
     position: absolute;
     height: 5vw;
@@ -522,11 +316,231 @@
     background:#FF7596;
     transition: all .3s ease-out;
   }
+  /* кисятки */
+  .cat img:nth-of-type(1) {
+    position: absolute;
+    z-index: 0;
+  }
+  .cat img:nth-of-type(2) {
+    position: absolute;
+    z-index: 2;
+  }
+  .cat, .cat2, .cat3 {
+    position: absolute;
+    bottom: -1vw;
+    left: 7%;
+    width: 26.319vw;
+    height: 44.031vw;
+  }
+  .cat img, .cat3 img {
+    width: 100%;
+    height: 100%;
+  }
+  .cat2 img:nth-of-type(1) {
+    width: 100%;
+    height: 100%;
+  }
+  #blush {
+    position: absolute;
+    width: 17vw;
+    height: 4.885vw;
+    bottom: 68%;
+    left: 28%;
+    transition: all .3s ease-out;
+    opacity: 0;
+  }
+  /* следящие глазки */
+  .look {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 1;
+  }
+  .eye {
+    position: absolute;
+    bottom: 72%;
+    left:43%;
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+  }
+  .eye:nth-of-type(2) {
+    bottom: 75%;
+    left:67%;
+  }
+  .eye:after {
+    position: absolute;
+    bottom: 1vw;
+    right: 0vw;
+    width: 2.2vw;
+    height: 2.2vw;
+    background: #FF7596;
+    border:0.8vw solid #E9FFE3;
+    border-radius: 50%;
+    content: " ";
+  }
+  /* начало блока с табличками желаний
+  главная табличка */
+  .ema {
+    position: absolute;
+    top:-12%;
+    left:50%;
+    margin-left: -8.94vw;
+    height: 55.681vw;
+    width: 17.885vw;
+  }
+  .ema img {
+    width: 100%;
+    height:100%;
+  }
+  .wish {
+    position: absolute;
+    top: 46%;
+    left: 8%;
+    width: 14.8vw;
+    height: 17vw;
+    background-color: transparent;
+    border: none;
+    font-size: 2vw;
+    line-height: 3vw;
+    color: #FF7596;
+    font-style: normal;
+  }
+  /* бэкграунд с канатиком и табличками */
+  .back_ema img {
+    position: absolute;
+  }
+  .back_ema img:nth-of-type(1) {
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+  .back_ema img:nth-of-type(2) {
+    width: 3vw;
+    height: 4.5vw;
+    top: 6vw;
+    left:7%;
+  }
+  .back_ema img:nth-of-type(3) {
+    width: 3vw;
+    height: 4.5vw;
+    top: 8vw;
+    left:15%;
+  }
+  .back_ema img:nth-of-type(4) {
+    width: 3vw;
+    height: 6vw;
+    top: 10vw;
+    left:34%;
+  }
+  .back_ema img:nth-of-type(5) {
+    width: 2vw;
+    height:4vw;
+    top: 4vw;
+    left:2%;
+  }
+  .back_ema img:nth-of-type(6) {
+    width: 2vw;
+    height: 5.5vw;
+    top: 11.5vw;
+    left: 43%;
+  }
+  .back_ema img:nth-of-type(7) {
+    width: 4vw;
+    height: 6vw;
+    top: 9.5vw;
+    left:24%;
+  }
+  .back_ema img:nth-of-type(8) {
+    width: 3vw;
+    height: 4.5vw;
+    top: 11.5vw;
+    left:53%;
+  }
+  .back_ema img:nth-of-type(9) {
+    width: 3vw;
+    height: 4.5vw;
+    top: 9.5vw;
+    left:71%;
+  }
+  .back_ema img:nth-of-type(10) {
+    width: 3vw;
+    height: 6vw;
+    top: 8.5vw;
+    left:78%;
+  }
+  .back_ema img:nth-of-type(11) {
+    width: 2vw;
+    height:4vw;
+    top: 10.5vw;
+    left:62%;
+  }
+  .back_ema img:nth-of-type(12) {
+    width: 2.5vw;
+    height: 6vw;
+    top: 4vw;
+    left:96%;
+  }
+  .back_ema img:nth-of-type(13) {
+    width: 4vw;
+    height: 6vw;
+    top: 6.5vw;
+    left:87%;
+  }
+  /* начало блока со счастливыми йенами
+  котик манеки неко */
+  .nekocat {
+    position: absolute;
+    top: 50%;
+    margin-top: -17%;
+    left:38%;
+    width: 24vw;
+    height: 39.167vw;
+    z-index: 1;
+  }
+  .nekocat img:nth-of-type(1) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .nekocat img:nth-of-type(2) {
+    position: absolute;
+    width: 28%;
+    height: 100%;
+    top: -2%;
+    left: -3%
+  }
+  .nekocat img:nth-of-type(3) {
+    display: none;
+    position: absolute;
+    width: 35%;
+    height: 30%;
+    top: 39.5%;
+    left: -3%;
+  }
+  /* йены */
+  .yen {
+    position: absolute;
+    top: -15vw;
+    width: 15vw;
+    height: 15vw;
+  }
+  .yeny{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+  .yen img {
+    width: 100%;
+    height: 100%;
+  }
+  /* начало блока с сакурой
+  счетчик сакуры */
   .count_sak {
     position: absolute;
     left: 3%;
     top: 4%;
-
   }
   .count_sak h4 {
     font-family: webgame_1;
@@ -536,6 +550,7 @@
     font-style: bold;
     color: #FF7596;
   }
+  /* деревцо */
   .tree {
     position: absolute;
     top: 0;
@@ -761,6 +776,7 @@
     top: 3vw;
     right: 33vw;
   }
+  /* всякие анимашки css */
   .knopka1 img:hover ~ .knop1, .knop1:hover, .knopka2 img:hover ~ .knop2, .knop2:hover, .knopka3 img:hover ~ .knop3, .knop3:hover{
     transform: scale(1.05);
     transition: all .3s ease-out;
@@ -776,9 +792,7 @@
   .knop {
     animation: knopka 2s linear;
   }
-  /* .knop1, .knop2, .knop3 {
-    animation: blobee 15s ease infinite;
-  } */
+
   @keyframes knopka {
     0% {}
     100% {transform: scale(13); }

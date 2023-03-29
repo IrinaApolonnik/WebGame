@@ -31,16 +31,39 @@
     display: none;
   }
   /* секции */
-  .zero, .first, .second, .third {
+  .zero, .first, .second, .third, .open {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
+  /* блок открывашка */
+  .open {
+    background-color: #FF7596;
+    z-index: 4;
+  }
+  /* логотеп */
+  .logo {
+    position: absolute;
+    width: 20%;
+    height: 30%;
+    top: 35%;
+    left: 40%;
+
+  }
+  .sca {
+    animation: 2s logo linear infinite;
+  }
+  @keyframes logo {
+    0% {transform: scale(1); opacity: 0.8;}
+    50% {transform: scale(1.1); opacity: 1;}
+    100% {transform: scale(1); opacity: 0.8;}
+  }
   /* бегущая строка */
   .runningstroke {
     position: absolute;
-    top: 10%;
+    top: 50%;
+    margin-top: -180vw;
     font-style: italic;
     font-size: 120vw;
     line-height: 374px;
@@ -155,9 +178,17 @@
     left: 50%;
     margin-left: -39.9vw;
     top: 14vw;
-    z-index: 2;
+    z-index: 3;
   }
-
+  .ok0 {
+    position:absolute;
+    width: 400%;
+    top:-150%;
+    left:-150%;
+    height: 700%;
+    background:#FF7596;
+    opacity: 0.8;
+  }
   .tablet1, .ok1 {
     position: absolute;
     height: 12vw;
