@@ -1,8 +1,8 @@
-@media only screen and (min-width:1024px) {
+@media only screen and (max-width:390px) {
   html {
     font-family: webgame;
-    width: 1440px;
-    height: 900px;
+    width: 390px;
+    height: 884px;
     overflow: hidden;
     cursor: url('../images/pawcursor.svg'), auto;
   }
@@ -16,50 +16,33 @@
     overflow: hidden;
     background: #FF7596;
     transition: all 0.7s ease-out;
-
   }
+  /* моё имячко */
   #me {
     position: absolute;
-    bottom: 1%;
-    left:45%;
-    font-size: 1.3vw;
+    top: 1%;
+    left: 1%;
+    font-size: 5vw;
     font-style: normal;
     color: #F05A7E;
   }
+  /* класс чтобы все прятать */
   .hide {
     display: none;
   }
-  .zero, .first, .second, .third, .open {
+  /* секции */
+  .zero, .first, .second, .third {
     position: absolute;
     width: 100%;
     height: 100%;
     overflow: hidden;
   }
-  .open {
-    background-color: #FF7596;
-    z-index: 4;
-  }
-  .logo {
-    position: absolute;
-    width: 20%;
-    height: 30%;
-    top: 35%;
-    left: 40%;
-
-  }
-  .sca {
-    animation: 2s logo linear infinite;
-  }
-  @keyframes logo {
-    0% {transform: scale(1); opacity: 0.8;}
-    50% {transform: scale(1.1); opacity: 1;}
-    100% {transform: scale(1); opacity: 0.8;}
-  }
+  /* бегущая строка */
   .runningstroke {
     position: absolute;
-    top: 28.5%;
+    top: 10%;
     font-style: italic;
-    font-size: 37vw;
+    font-size: 120vw;
     line-height: 374px;
     color: #DEFFFF;
     animation: text 8s linear -0.5s infinite;
@@ -69,11 +52,12 @@
     0% {transform: translateX(-1.389vw)}
     100% {transform: translateX(-50%)}
   }
+  /* кнопки */
   .knopka1, .knopka2, .knopka3 {
     position: absolute;
     border-radius: 50%;
-    width: 20.833vw;
-    height: 20.833vw;
+    width: 32vw;
+    height: 32vw;
     z-index: 0;
   }
   .knopka1 img, .knopka2 img, .knopka3 img {
@@ -83,8 +67,8 @@
   .knop1, .knop2, .knop3 {
     position: absolute;
     border-radius: 50%;
-    width: 20.833vw;
-    height: 20.833vw;
+    width: 32vw;
+    height: 32vw;
     transition: all .3s ease-out;
     z-index: 0;
   }
@@ -98,84 +82,37 @@
     background: #E9FFE3;
   }
   .knopka1 {
-    top: -5%;
-    right: 10%;
-  }
-  .knopka1 img {
-    overflow: scroll;
-    width: 33%;
-    height: 33%;
-  }
-  .knopka1 img:nth-of-type(1) {
-    top: 18%;
-    left: 35%;
-  }
-  .knopka1 img:nth-of-type(2) {
-    top: 45%;
-    left: 17%;
-    transform: rotate(-15deg);
-  }
-  .knopka1 img:nth-of-type(3) {
-    top: 48%;
-    right: 19%;
-    transform: rotate(15deg);
+    bottom: 10%;
+    left: -5%;
   }
   .knopka2 {
-    top: 50%;
-    margin-top: -10.4vw;
-    right: 25%;
-  }
-  .knopka2 img {
-    overflow: scroll;
-    width: 33%;
-    height: 33%;
-  }
-  .knopka2 img:nth-of-type(1) {
-    position: absolute;
-    top: 25%;
-    right: 19%;
-  }
-  .knopka2 img:nth-of-type(2) {
-    position: absolute;
-    top: 25%;
-    left: 19%;
-  }
-  .knopka2 img:nth-of-type(3) {
-    position: absolute;
-    top: 49%;
-    left: 33%;;
+    right: 50%;
+    margin-right: -16vw;
+    bottom: 5%;
   }
   .knopka3 {
-    bottom: -5%;
-    right: 10%;
+    bottom: 10%;
+    right: -5%;
   }
-  .knopka3 img {
+  .knopka1 img, .knopka2 img, .knopka3 img {
     overflow: scroll;
-    width: 31%;
-    height: 31%;
+    width: 50%;
+    height: 50%;
   }
-  .knopka3 img:nth-of-type(1) {
+  .knopka2 img:nth-of-type(1), .knopka3 img:nth-of-type(1), .knopka1 img:nth-of-type(1) {
     position: absolute;
-    top: 18%;
-    left: 35%;
+    top: 25%;
+    right: 25%;
   }
-  .knopka3 img:nth-of-type(2) {
-    position: absolute;
-    top: 45%;
-    left: 17%;
+  .knopka1 img:nth-of-type(2), .knopka1 img:nth-of-type(3), .knopka2 img:nth-of-type(2), .knopka2 img:nth-of-type(3), .knopka3 img:nth-of-type(2), .knopka3 img:nth-of-type(3) {
+    display: none;
   }
-  .knopka3 img:nth-of-type(3) {
-    position: absolute;
-    top: 48%;
-    right: 19%;
-    transform: rotate(90deg);
-  }
-
+  /* кнопки назад и помощь */
   .back1, .help1, .back2, .help2, .back3, .help3 {
     position: absolute;
     border-radius: 50%;
-    width: 6vw;
-    height: 6vw;
+    width:20vw;
+    height:20vw;
     display: flex;
     justify-content: center;
     transition: all .3s ease-out;
@@ -183,21 +120,21 @@
   .backy1, .helpy1, .backy2, .helpy2, .backy3, .helpy3 {
     position: absolute;
     border-radius: 50%;
-    width: 6vw;
-    height: 6vw;
+    width:20vw;
+    height:20vw;
     background: #FF7596;
     z-index: 0;
     transition: all .3s ease-out;
   }
   .back1, .back2, .back3 {
     left: 1%;
-    bottom: 2%;
-    top: auto;
+    top: 1%;
+    bottom: auto;
   }
   .help1, .help2, .help3 {
-    left: 8%;
-    bottom: 2%;
-    top: auto;
+    left: 23%;
+    top: 1%;
+    bottom: auto;
   }
   .back1 img, .help1 img, .back2 img, .help2 img, .back3 img, .help3 img {
     z-index: 1;
@@ -212,34 +149,26 @@
   }
   .tablet, .ok {
     position: absolute;
-    height: 18.611vw;
-    width: 38.333vw;
+    height: 38.503vw;
+    width: 79.306vw;
     border-radius: 5vw;
     left: 50%;
-    margin-left: -17.5vw;
-    bottom: 16vw;
-    z-index: 3;
+    margin-left: -39.9vw;
+    top: 14vw;
+    z-index: 2;
   }
-  .ok0 {
-    position:absolute;
-    width: 400%;
-    top:-150%;
-    left:-150%;
-    height: 400%;
-    background:#FF7596;
-    opacity: 0.8;
-  }
+
   .tablet1, .ok1 {
     position: absolute;
-    height: 5vw;
-    width:5vw;
-    top:3%;
-    left: 25.2vw;
+    height: 12vw;
+    width:12vw;
+    top:-1.8%;
+    left: 50.8vw;
     background-color: transparent;
   }
   .ok1 {
     top: auto;
-    bottom:3%;
+    bottom:-1.8%;
   }
   .tablet1 img, .ok1 img {
     width: 100%;
@@ -247,26 +176,26 @@
   }
   .tablet2, .ok2 {
     position: absolute;
-    top: -6.5%;
+    top: -10%;
     right: 0;
-    height: 7.708vw;
-    width: 7.708vw;
-    border: 0.3vw solid #FF7596 ;
-    border-radius: 10vw;
+    height: 15.947vw;
+    width: 15.947vw;
+    border: 0.6vw solid #FF7596 ;
+    border-radius: 50%;
     background: #DEFFFF;
     transition: all .3s ease-out;
   }
   .ok2 {
     top: auto;
-    bottom: -6.5%;
+    bottom: -10%;
   }
   .tablet3, .ok3 {
     position: absolute;
     left: 0;
     bottom: 0;
-    height:12.778vw;
-    width: 35.069vw;
-    border: 0.3vw solid #FF7596 ;
+    height:26.435vw;
+    width: 72.553vw;
+    border: 0.6vw solid #FF7596 ;
     border-radius: 10vw;
     background: #DEFFFF;
   }
@@ -278,8 +207,8 @@
     position: absolute;
     top: 24%;
     left: 3vw;
-    font-size: 2.5vw;
-    line-height: 3vw;
+    font-size: 5vw;
+    line-height: 6vw;
     color: #FF7596;
     font-style: normal;
   }
@@ -287,7 +216,7 @@
     position: absolute;
     height: 100%;
     width: 45%;
-    left: 2vw;
+    left: 4.5vw;
     transition: all .3s ease-out;
   }
   .tablet2 img:nth-of-type(2), .ok2 img:nth-of-type(2){
@@ -308,201 +237,210 @@
     transition: all .3s ease-out;
   }
 
+  /* котик */
   .cat img:nth-of-type(1) {
     position: absolute;
     z-index: 0;
-        /* !!!!!!!!! */
   }
   .cat img:nth-of-type(2) {
     position: absolute;
     z-index: 2;
   }
-  .look {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    top:0;
-    z-index: 1;
-      /* !!!!!!!!! */
-  }
-  .eye {
-    position: absolute;
-    bottom: 72%;
-    left:43%;
-    border-radius: 50%;
-    height: 3vw;
-    width: 3vw;
-    /* background: #CCC; */
-  }
-  .eye:nth-of-type(2) {
-    bottom: 75%;
-    left:67%;
-  }
-  .eye:after {
-    position: absolute;
-    bottom: 1vw;
-    right: 0vw;
-    width: 2.2vw;
-    height: 2.2vw;
-    background: #FF7596;
-    border:0.8vw solid #E9FFE3;
-    border-radius: 50%;
-    content: " ";
-  }
   .cat, .cat2, .cat3 {
     position: absolute;
-    bottom: -1vw;
-    left: 7%;
-    width: 26.319vw;
-    height: 44.031vw;
+    top: 8%;
+    left: 10%;
+    width: 77.319vw;
+    height: 141.031vw;
     /* !!!!!!!!! */
   }
   .cat img, .cat3 img {
     width: 100%;
     height: 100%;
   }
-
   .cat2 img:nth-of-type(1) {
     width: 100%;
     height: 100%;
   }
   #blush {
     position: absolute;
-    width: 17vw;
-    height: 4.885vw;
+    width: 48vw;
+    height: 13vw;
     bottom: 68%;
     left: 28%;
     transition: all .3s ease-out;
     opacity: 0;
   }
+  /* следящие глазки котика */
+  .look {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    z-index: 1;
+  }
+  .eye {
+    position: absolute;
+    bottom: 69%;
+    left:44%;
+    border-radius: 50%;
+    height: 12vw;
+    width: 12vw;
+  }
+  .eye:nth-of-type(2) {
+    bottom: 72%;
+    left:68%;
+  }
+  .eye:after {
+    position: absolute;
+    bottom: 1vw;
+    right: 0vw;
+    width: 7vw;
+    height: 7vw;
+    background: #FF7596;
+    border:1.2vw solid #E9FFE3;
+    border-radius: 50%;
+    content: " ";
+  }
 
+  /* первая мини-игра */
   .ema {
     position: absolute;
-    top:-12%;
-    left:50%;
-    margin-left: -8.94vw;
-    height: 55.681vw;
-    width: 17.885vw;
+    top: -4%;
+    left: 50%;
+    margin-left: -26vw;
+    height: 164vw;
+    width: 52vw;
+  }
   }
   .ema img {
     width: 100%;
     height:100%;
   }
-  /* .vvod {
-    left: 5%;
-    width: 90%;
-    height: 40%;
-    background-color: transparent;
-    border: none;
-  } */
-  /* .activeelement {
-    border: none;
-  } */
-
   .wish {
     position: absolute;
     top: 46%;
     left: 8%;
-    width: 14.8vw;
-    height: 17vw;
+    width: 42.8vw;
+    height: 50vw;
     background-color: transparent;
     border: none;
-    font-size: 2vw;
-    line-height: 3vw;
+    font-size: 5vw;
+    line-height: 6vw;
     color: #FF7596;
     font-style: normal;
   }
-  /* .back_ema {
-    position: absolute;
-  } */
   .back_ema img {
     position: absolute;
   }
   .back_ema img:nth-of-type(1) {
-    width: 100%;
-    top: 0;
-    left: 0;
+    width: 250%;
+    left: -84%;
+    bottom: 24%;
   }
   .back_ema img:nth-of-type(2) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 6vw;
-    left:7%;
-
+    width: 7vw;
+    height: 10.5vw;
+    bottom: 41vw;
+    left: 7%;
   }
   .back_ema img:nth-of-type(3) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 8vw;
-    left:15%;
+    width: 7vw;
+    height: 12.5vw;
+    bottom: 18vw;
+    left: 15%;
   }
   .back_ema img:nth-of-type(4) {
-    width: 3vw;
-    height: 6vw;
-    top: 10vw;
-    left:34%;
+    width: 8vw;
+    height: 18vw;
+    bottom: 8vw;
+    left: 34%;
   }
   .back_ema img:nth-of-type(5) {
-    width: 2vw;
-    height:4vw;
-    top: 4vw;
-    left:2%;
+    width: 6vw;
+    height: 11vw;
+    bottom: 9vw;
+    left: 2%;
   }
   .back_ema img:nth-of-type(6) {
-    width: 2vw;
-    height: 5.5vw;
-    top: 11.5vw;
+    width: 5vw;
+    height: 14.5vw;
+    bottom: 30.5vw;
     left: 43%;
   }
   .back_ema img:nth-of-type(7) {
-    width: 4vw;
-    height: 6vw;
-    top: 9.5vw;
-    left:24%;
+    width: 9vw;
+    height: 14vw;
+    bottom: 34.5vw;
+    left: 24%;
   }
   .back_ema img:nth-of-type(8) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 11.5vw;
-    left:53%;
+    width: 7vw;
+    height: 15.5vw;
+    bottom: -5.5vw;
+    left: 53%;
   }
   .back_ema img:nth-of-type(9) {
-    width: 3vw;
-    height: 4.5vw;
-    top: 9.5vw;
-    left:71%;
+    width: 10vw;
+    height: 12.5vw;
+    bottom: 13.5vw;
+    left: 63%;
   }
   .back_ema img:nth-of-type(10) {
-    width: 3vw;
-    height: 6vw;
-    top: 8.5vw;
-    left:78%;
+    width: 6vw;
+    height: 17vw;
+    bottom: 33.5vw;
+    left: 78%
   }
   .back_ema img:nth-of-type(11) {
-    width: 2vw;
-    height:4vw;
-    top: 10.5vw;
-    left:62%;
+    width: 9vw;
+    height: 10vw;
+    bottom: 35.5vw;
+    left: 62%;
   }
   .back_ema img:nth-of-type(12) {
-    width: 2.5vw;
-    height: 6vw;
-    top: 4vw;
-    left:96%;
+    width: 4.5vw;
+    height: 14vw;
+    bottom: 24vw;
+    left: 93%;
   }
   .back_ema img:nth-of-type(13) {
-    width: 4vw;
-    height: 6vw;
-    top: 6.5vw;
-    left:87%;
+    width: 9vw;
+    height: 14vw;
+    bottom: 6.5vw;
+    left: 84%;
+  }
+  .back_ema img {
+    transition: all .3s ease-out;
+  }
+  .back_ema img:hover {
+    transform: rotate(-20deg);
+    transition: all .3s ease-out;
+  }
+  .back_ema img:nth-of-type(1):hover {
+    transform: rotate(0deg);
+  }
+  .up {
+    animation: up 2s ease-out;
+  }
+  @keyframes up {
+    0% {top:-5%}
+    60% {top: -120%}
+  }
+  .down {
+    animation: down 2s ease-in;
+  }
+  @keyframes down {
+    0% {top:-120%}
+    60% {top: -5%}
   }
   .nekocat {
     position: absolute;
     top: 50%;
-    margin-top: -17%;
-    left:38%;
-    width: 24vw;
-    height: 39.167vw;
+    margin-top: -45%;
+    left: 8.5%;
+    width: 85vw;
+    height: 107.167vw;
     z-index: 1;
   }
   .nekocat img:nth-of-type(1) {
@@ -527,9 +465,9 @@
   }
   .yen {
     position: absolute;
-    top: -15vw;
-    width: 15vw;
-    height: 15vw;
+    top: -40vw;
+    width: 40vw;
+    height: 40vw;
   }
   .yeny{
     position: absolute;
@@ -544,12 +482,12 @@
   .count_sak {
     position: absolute;
     left: 3%;
-    top: 4%;
+    top: 69%;
 
   }
   .count_sak h4 {
     font-family: webgame_1;
-    font-size: 96px;
+    font-size: 37px;
     line-height: 115px;
     letter-spacing: 0.415em;
     font-style: bold;
@@ -557,228 +495,234 @@
   }
   .tree {
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 65.625vw;
-    height: 40.556vw;
-    transform: none;
+    bottom: 10%;
+    right: -45%;
+    transform: rotate(90deg);
+    width: 223.625vw;
+    height: 141vw;
   }
   .tree img {
+    position: absolute;
     width: 100%;
     height: 100%;
   }
+  .sakura {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
   .sakura img {
     position: absolute;
-    width: 4.7vw;
-    height: 4.7vw;
+    width: 15vw;
+    height: 15vw;
   }
   .sakura img:nth-of-type(1) {
-    top: 10vw;
-    right: 10vw;
+    top: 49vw;
+    right: 161vw;
   }
   .sakura img:nth-of-type(2) {
-    top: 10vw;
-    right: 0vw;
+    top: 12vw;
+    right: 183vw;
   }
   .sakura img:nth-of-type(3) {
-    top: -1vw;
-    right: 42vw;
+    top: 52vw;
+    right: 211vw;
   }
   .sakura img:nth-of-type(4) {
-    top: 5vw;
-    right: 54vw;
+    top: 45vw;
+    right: 45vw;
   }
   .sakura img:nth-of-type(5) {
-    top: 6vw;
-    right: 51vw;
+    top: 52vw;
+    right: 168vw;
   }
   .sakura img:nth-of-type(6) {
-    top: 19vw;
-    right: 38vw;
+    top: 35vw;
+    right: 120vw;
   }
   .sakura img:nth-of-type(7) {
-    top: 16vw;
-    right: 40vw;
+    top: 78vw;
+    right: 156vw;
   }
   .sakura img:nth-of-type(8) {
-    top: 5vw;
-    right: 41vw;
+    top: 44vw;
+    right: 144vw;
   }
   .sakura img:nth-of-type(9) {
-    top: 1vw;
-    right: 1vw;
+    top: 40vw;
+    right: 199vw;
   }
   .sakura img:nth-of-type(10) {
-    top: -2vw;
-    right: 25vw;
+    top: 34vw;
+    right: 159vw;
   }
   .sakura img:nth-of-type(11) {
     top: 21vw;
-    right: 54vw;
+    right: 100vw;
   }
   .sakura img:nth-of-type(12) {
-    top: 18vw;
-    right: 49vw;
+    top: 55vw;
+    right: 190vw;
   }
   .sakura img:nth-of-type(13) {
-    top: -2vw;
-    right: 7vw;
+    top: 14vw;
+    right: 133vw;
   }
   .sakura img:nth-of-type(14) {
-    top: 1vw;
-    right: 10vw;
+    top: 18vw;
+    right: 187vw;
   }
   .sakura img:nth-of-type(15) {
-    top: 3vw;
-    right: 7vw;
+    top: 75vw;
+    right: 184vw;
   }
   .sakura img:nth-of-type(16) {
-    top: 0vw;
-    right: 22vw;
+    top: 55vw;
+    right: 144vw;
   }
   .sakura img:nth-of-type(17) {
-    top: 4vw;
-    right: 0vw;
+    top: 7vw;
+    right: 112vw;
   }
   .sakura img:nth-of-type(18) {
-    top: 15vw;
-    right: 1vw;
+    top: 63vw;
+    right: 111vw;
   }
   .sakura img:nth-of-type(19) {
-    top: 4vw;
-    right: 27vw;
+    top: 47vw;
+    right: 183vw;
   }
   .sakura img:nth-of-type(20) {
-    top: 7vw;
-    right: 12vw;
+    top: -2vw;
+    right: 128vw;
   }
   .sakura img:nth-of-type(21) {
-    top: 13vw;
-    right: 25vw;
+    top: 53vw;
+    right: 90vw;
   }
   .sakura img:nth-of-type(22) {
-    top: -3vw;
-    right: 37vw;
+    top: 65vw;
+    right: 162vw;
   }
   .sakura img:nth-of-type(23) {
-    top: 8vw;
-    right: 55vw;
+    top: 4vw;
+    right: 86vw;
   }
   .sakura img:nth-of-type(24) {
-    top: 24vw;
-    right: 57vw;
+    top: -2vw;
+    right: 142vw;
   }
   .sakura img:nth-of-type(25) {
-    top: 19vw;
-    right: 9vw;
+    top: 45vw;
+    right: 94vw;
   }
   .sakura img:nth-of-type(26) {
-    top: 10vw;
-    right: 49vw;
+    top: 17vw;
+    right: 121vw;
   }
   .sakura img:nth-of-type(27) {
-    top: 9vw;
-    right: 6vw;
+    top: 28vw;
+    right: 76vw;
   }
   .sakura img:nth-of-type(28) {
-    top: 7vw;
-    right: 31vw;
+    top: 45vw;
+    right: 64vw;
   }
   .sakura img:nth-of-type(29) {
     top: 6vw;
     right: 19vw;
   }
   .sakura img:nth-of-type(30) {
-    top: 13vw;
-    right: 51vw;
+    top: 27vw;
+    right: 140vw;
   }
   .sakura img:nth-of-type(31) {
-    top: 3vw;
-    right: 23vw;
+    top: 35vw;
+    right: 87vw;
   }
   .sakura img:nth-of-type(32) {
-    top: -1vw;
-    right: 14vw;
+    top: 26vw;
+    right: 46vw;
   }
   .sakura img:nth-of-type(33) {
-    top: 13vw;
-    right: 63vw;
+    top: 57vw;
+    right: 131vw;
   }
   .sakura img:nth-of-type(34) {
-    top: 17vw;
-    right: 53vw;
+    top: 63vw;
+    right: 123vw;
   }
   .sakura img:nth-of-type(35) {
-    top: 12vw;
-    right: 14vw;
+    top: 120vw;
+    right: 477vw;
   }
   .sakura img:nth-of-type(36) {
-    top: 15vw;
-    right: 28vw;
+    top: 95vw;
+    right: 184vw;
   }
   .sakura img:nth-of-type(37) {
     top: 26vw;
-    right: 53vw;
+    right: 63vw;
   }
   .sakura img:nth-of-type(38) {
-    top: 18vw;
-    right: 43vw;
+    top: 16vw;
+    right: 67vw;
   }
   .sakura img:nth-of-type(39) {
-    top: 15vw;
-    right: 45vw;
+    top: 27vw;
+    right: 193vw;
   }
   .sakura img:nth-of-type(40) {
-    top: 24vw;
-    right: 50vw;
+    top: 7vw;
+    right: 35vw;
   }
   .sakura img:nth-of-type(41) {
-    top: 0vw;
-    right: 38vw;
+    top: 57vw;
+    right: 206vw;
   }
   .sakura img:nth-of-type(42) {
-    top: 14vw;
-    right: 57vw;
+    top: 36vw;
+    right: 13vw;
   }
   .sakura img:nth-of-type(43) {
-    top: 28vw;
-    right: 55vw;
+    top: 61vw;
+    right: 146vw;
   }
   .sakura img:nth-of-type(44) {
-    top: 11vw;
-    right: 55vw;
+    top: 49vw;
+    right: 215vw;
   }
   .sakura img:nth-of-type(45) {
-    top: 22vw;
-    right: 3vw;
+    top: 13vw;
+    right: 156vw;
   }
   .sakura img:nth-of-type(46) {
-    top: -3vw;
-    right: 46vw;
+    top: 75vw;
+    right: 163vw;
   }
   .sakura img:nth-of-type(47) {
-    top: 4vw;
-    right: 14vw;
+    top: 27vw;
+    right: 169vw;
   }
   .sakura img:nth-of-type(48) {
-    top: 12vw;
-    right: 42vw;
+    top: 69vw;
+    right: 127vw;
   }
   .sakura img:nth-of-type(49) {
-    top: 12vw;
-    right: 28vw;
+    top: 53vw;
+    right: 38vw;
   }
   .sakura img:nth-of-type(50) {
-    top: 3vw;
-    right: 19vw;
+    top: 39vw;
+    right: 194vw;
   }
   .sakura img:nth-of-type(51) {
-    top: 12vw;
-    right: 34vw;
+    top: 85vw;
+    right: 136vw;
   }
   .sakura img:nth-of-type(52) {
-    top: 3vw;
-    right: 33vw;
+    top: 37vw;
+    right: 24vw;
   }
   .knopka1 img:hover ~ .knop1, .knop1:hover, .knopka2 img:hover ~ .knop2, .knop2:hover, .knopka3 img:hover ~ .knop3, .knop3:hover{
     transform: scale(1.05);
@@ -838,30 +782,7 @@
     60% {opacity: 1}
     100% {opacity: 1}
   }
-  .back_ema img {
-    transition: all .3s ease-out;
-  }
-  .back_ema img:hover {
-    transform: rotate(-20deg);
-    transition: all .3s ease-out;
-  }
-  .back_ema img:nth-of-type(1):hover {
-    transform: rotate(0deg);
-  }
-  .up {
-    animation: up 2s ease-out;
-  }
-  @keyframes up {
-    0% {top:-12%}
-    60% {top: -120%}
-  }
-  .down {
-    animation: down 2s ease-in;
-  }
-  @keyframes down {
-    0% {top:-120%}
-    60% {top: -12%}
-  }
+
   .coinx {
     animation: coinx 0.5s alternate infinite linear;
   }
@@ -891,6 +812,6 @@
     25%{transform:translateX(2vw) rotate(25deg)}
     50%{transform:translateX(-2vw) rotate(50deg)}
     75%{transform:translateX(2vw) rotate(75deg)}
-    100% {top:140%; transform:translateX(-2vw) rotate(100deg)}
+    100% {right:-100%; transform:translateX(-2vw) rotate(100deg)}
   }
 }

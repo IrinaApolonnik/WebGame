@@ -6,16 +6,27 @@
     <link rel="stylesheet" href="stylesheets/style.css" type="text/css">
     <title>ni_shipi_game</title>
     <link rel="icon" type="image/x-icon" href="images/icon.ico" />
-    <script src="java/jquery-3.6.3.js"></script>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     <script type="text/javascript" src="java/index.js"></script>
-
   </head>
   <body>
-    <div class="runningstroke">
-      <p>помурчимпомурчим</p>
-    </div>
+  <!-- бегущая строчка -->
+  <p class="runningstroke">помурчимпомурчим</p>
+  <!-- первый блок -->
   <section class="zero show">
+    <!-- окошко с подтверждением -->
+    <div class="ok hide">
+      <div class="ok0"></div>
+      <div class="ok1"> </div>
+      <div class="ok2">
+        <img src="images/ok2.svg" alt="">
+        <img src="images/ok.svg" alt="">
+      </div>
+      <div class="ok3"><p>прокачаем твою удачу? ;з</p> </div>
+    </div>
+    <!-- моё имячко -->
+    <p id="me">Ирина Аполонник</p>
+    <!-- состояния кошечки -->
     <div class="cat">
       <img src="images/catbase.svg" alt="">
       <div class='look'>
@@ -31,15 +42,21 @@
       <img src="images/cat2.svg" alt="">
       <img id="blush" src="images/blush2.svg" alt="">
     </div>
+    <!-- кнопка к блоку с табличками желаний -->
     <div class="knopka1">
+      <img src="images/bant.svg" alt="">
+      <img src="images/bant.svg" alt="">
+      <img src="images/bant.svg" alt="">
       <div class="knop1"></div>
     </div>
+    <!-- кнопка к блоку с кошечкой манеки неко -->
     <div class="knopka2">
       <img src="images/coin.svg" alt="">
       <img src="images/coin.svg" alt="">
       <img src="images/coin.svg" alt="">
       <div class="knop2"></div>
     </div>
+    <!-- кнопка к блоку с сакурой удачи -->
     <div class="knopka3">
       <img src="images/sakura4.svg" alt="">
       <img src="images/sakura5.svg" alt="">
@@ -47,19 +64,56 @@
       <div class="knop3"></div>
     </div>
   </section>
+  <!-- блок с желаниями -->
   <section class="first hide">
+    <!-- бэкграунд с канатиком и табличками -->
+    <div class="back_ema">
+      <img src="images/knot.svg" alt="">
+      <img src="images/ema1.svg" alt="">
+      <img class="" src="images/ema2.svg" alt="">
+      <img src="images/ema3.svg" alt="">
+      <img src="images/ema4.svg" alt="">
+      <img class="" src="images/ema5.svg" alt="">
+      <img src="images/ema6.svg" alt="">
+      <img class="" src="images/ema1.svg" alt="">
+      <img src="images/ema2.svg" alt="">
+      <img src="images/ema3.svg" alt="">
+      <img class="" src="images/ema4.svg" alt="">
+      <img src="images/ema5.svg" alt="">
+      <img src="images/ema6.svg" alt="">
+    </div>
+    <!-- главная табличка с вводом желаний -->
+    <div class="ema down">
+      <img src="images/ema.svg" alt="">
+      <textarea class="wish" type="text" name="">Я желаю...</textarea>
+    </div>
+    <!-- кнопка назад -->
     <div class="back1">
       <img src="images/arrow.svg" alt="">
       <div class="backy1"></div>
     </div>
+    <!-- кнопка памагити -->
     <div class="help1">
       <img src="images/help.svg" alt="">
       <div class="helpy1"></div>
     </div>
+    <!-- плашка с советом -->
     <div class="tablet hide">
-      <div class="tablet1"><h2>таблички эма</h2> </div>
-      <div class="tablet2"><h3>напиши свои мечты или пожелания!</h3> </div>
-      <div class="tablet3"><img src="images/close.svg" alt=""> </div>
+      <div class="tablet1"><img src="images/bant.svg" alt=""> </div>
+      <div class="tablet2">
+        <img src="images/close.svg" alt="">
+        <img src="images/close2.svg" alt="">
+      </div>
+      <div class="tablet3"><p>напиши свои мечты <br> или пожелания!</p> </div>
+    </div>
+    <!-- штучка, которая выскакивает при выполнении задания -->
+    <div class="ok hide">
+      <div class="ok1"><img src="images/bant.svg" alt=""> </div>
+      <div class="ok2">
+        <img src="images/ok2.svg" alt="">
+        <img src="images/ok.svg" alt="">
+      </div>
+      <div class="ok3"><p>вселенная ушла исполнять ваши желания!</p> </div>
     </div>
   </section>
   <section class="second hide">
@@ -70,9 +124,6 @@
     </div>
     <div class="yen ">
       <img src="images/yen.svg" alt="">
-      <!-- <div class="yeny coinx">
-        <img src="images/yen.svg" alt="">
-      </div> -->
     </div>
     <div class="back2">
       <img src="images/arrow.svg" alt="">
@@ -83,69 +134,81 @@
       <div class="helpy2"></div>
     </div>
     <div class="tablet hide">
-      <div class="tablet1"><h2>манэки-нэко</h2> </div>
-      <div class="tablet2"><h3>кликни по кошечке нэко <br>и заработай йены удачи!</h3> </div>
-      <div class="tablet3"> <img src="images/close.svg" alt=""> </div>
+      <div class="tablet1"><img src="images/coin.svg" alt=""></div>
+      <div class="tablet2">
+        <img src="images/close.svg" alt="">
+        <img src="images/close2.svg" alt="">
+      </div>
+      <div class="tablet3"><p>кликни по кошечке нэко <br>и заработай йены удачи!</p> </div>
+    </div>
+    <div class="ok hide">
+      <div class="ok1"><img src="images/coin.svg" alt=""> </div>
+      <div class="ok2">
+        <img src="images/ok2.svg" alt="">
+        <img src="images/ok.svg" alt="">
+      </div>
+      <div class="ok3"><p>вы получили максимум счастливых йенов!</p> </div>
     </div>
   </section>
   <section class="third hide">
     <div class="tree">
       <img src="images/tree.svg" alt="">
+      <div class="sakura">
+        <img src="images/sakura4.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura4.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura4.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura4.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+        <img src="images/sakura5.svg" alt="">
+      </div>
     </div>
-    <div class="sakura">
-      <img src="images/sakura4.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura4.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura4.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura4.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-      <img src="images/sakura5.svg" alt="">
-    </div>
+
     <div class="back3">
       <img src="images/arrow.svg" alt="">
       <div class="backy3"></div>
@@ -158,10 +221,24 @@
       <h4 id="count_sak">0/4</h4>
     </div>
     <div class="tablet hide">
-      <div class="tablet1"><h2>сакура удачи</h2> </div>
-      <div class="tablet2"><h3>найди все четырехлистные цветы и прокачай удачу!</h3> </div>
-      <div class="tablet3"><img src="images/close.svg" alt=""> </div>
+      <div class="tablet1"><img src="images/sakura5.svg" alt=""></div>
+      <div class="tablet2">
+        <img src="images/close.svg" alt="">
+        <img src="images/close2.svg" alt="">
+      </div>
+      <div class="tablet3"><p>найди все четырехлистные цветы и прокачай удачу!</p> </div>
     </div>
+    <div class="ok hide">
+      <div class="ok1"><img src="images/sakura4.svg" alt=""> </div>
+      <div class="ok2">
+        <img src="images/ok2.svg" alt="">
+        <img src="images/ok.svg" alt="">
+      </div>
+      <div class="ok3"><p>вы нашли все четырехлистные цветы!</p> </div>
+    </div>
+  </section>
+  <section class="open">
+    <img class="logo sca" src="images/logo.svg" alt="">
   </section>
   </body>
 </html>

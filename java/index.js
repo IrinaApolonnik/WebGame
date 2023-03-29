@@ -1,7 +1,5 @@
 $(document).ready(function(){
-	$("body").scroll(function() {
-		$("knopka1").css("top", "50%");
-	});
+
 	$("body").mousemove(function(event) {
 		let eye = $(".eye");
 		let x = (eye.offset().left) + (eye.width() / 2);
@@ -46,7 +44,7 @@ $(document).ready(function(){
 	});
 
 	$(".knopka1, .knopka2, .knopka3").click(function(){
-		$(".runningstroke p").css("color", "#FF7596" );
+		$(".runningstroke").css("color", "#FF7596" );
 		$(this).css("z-index","2");
 		$(".zero").toggleClass("show");
 		$(".zero").toggleClass("opac");
@@ -62,7 +60,7 @@ $(document).ready(function(){
 		$(".backy1").toggleClass("backy");
 		$(".first").toggleClass("show");
 		$(".first").toggleClass("opac");
-		$(".runningstroke p").css("color", "#DEFFFF" );
+		$(".runningstroke").css("color", "#DEFFFF" );
 		$("body").css("background-color", "#FF7596" );
 		setTimeout(function(){
 			$(".backy1").toggleClass("backy");
@@ -79,7 +77,7 @@ $(document).ready(function(){
 		$(".backy2").toggleClass("backy");
 		$(".second").toggleClass("show");
 		$(".second").toggleClass("opac");
-		$(".runningstroke p").css("color", "#DEFFFF" );
+		$(".runningstroke").css("color", "#DEFFFF" );
 		$("body").css("background-color", "#FF7596" );
 		setTimeout(function(){
 			$(".backy2").toggleClass("backy");
@@ -96,7 +94,7 @@ $(document).ready(function(){
 		$(".backy3").toggleClass("backy");
 		$(".third").toggleClass("show");
 		$(".third").toggleClass("opac");
-		$(".runningstroke p").css("color", "#DEFFFF" );
+		$(".runningstroke ").css("color", "#DEFFFF" );
 		$("body").css("background-color", "#FF7596" );
 		setTimeout(function(){
 			$(".backy3").toggleClass("backy");
@@ -116,24 +114,59 @@ $(document).ready(function(){
 		}, 1200);
 	});
 
-	$(".tablet3").click(function(){
+	$(".tablet2").click(function(){
 		$(".tablet").toggleClass("opac");
 		setTimeout(function(){
 			$(".tablet").toggleClass("hide");
 			$(".tablet").toggleClass("opac");
 		}, 1200);
 	});
-
+	$( ".tablet2, .ok2" ).hover(function(){
+		$(".tablet2 img:nth-of-type(2), .ok2 img:nth-of-type(2)").css("opacity","1");
+		$(".tablet2 img:nth-of-type(1), .ok2 img:nth-of-type(1)").css("opacity","0");
+		},
+		function(){
+			$(".tablet2 img:nth-of-type(2), .ok2 img:nth-of-type(2)").css("opacity","0");
+			$(".tablet2 img:nth-of-type(1), .ok2 img:nth-of-type(1)").css("opacity","1");
+	});
+	$(document).keypress(function(e) {
+		if(e.which == 13) {
+			$(".ema").toggleClass("up");
+			$(".ema").toggleClass("down");
+			// let counte = 0;
+			// 	$(".ema").trigger("cssClassChanged");
+			// 	counte += 1;
+			// 		if (counte == 1) {
+			// 			$('.showe1').css("animation-play-state", "running");
+			// 			alert("kjk")
+			// 		}
+			// 		else if (counte == 2) {
+			// 			$('.showe2').css("animation-play-state", "running");
+			// 			alert("kjiuuuuuk")
+			// 		}
+			// 		else if (counte == 3) {
+			// 			$('.showe3').css("animation-play-state", "running");
+			// 		}
+			// 		else {
+			// 			$('.showe4').css("animation-play-state", "running");
+			// 		}
+			setTimeout(function(){
+				$(".wish").val("Я желаю...");
+				$(".ema").toggleClass("up");
+				$(".ema").toggleClass("down");
+			}, 1200);
+	 	}
+	});
  // взаимодействие с кошкой удачи
 	$(".nekocat").click(function(){
 		let myArray = [
+		"5%",
   	"10%",
   	"20%",
   	"30%",
 		"40%",
 		"50%",
 		"60%",
-		"70%",
 		"80%"
 		];
 		let randomItem = myArray[Math.floor(Math.random()*myArray.length)];
@@ -192,7 +225,62 @@ $(document).ready(function(){
 					}
 					else {
 						$('#count_sak').html("4/4");
+						$('.ok').toggleClass("hide");
+						$('.ok').toggleClass("show-tablet");
+						setTimeout(function(){
+							$('.ok').toggleClass("show-tablet");
+						}, 1200);
 					}
         });
 	});
+	$(function(){
+		let countc = 0;
+        $(".nekocat").click(function () {
+          countc += 1;
+          if (countc == 14) {
+						$( ".nekocat").unbind( "click" );
+						$('.ok').toggleClass("hide");
+						$('.ok').toggleClass("show-tablet");
+						setTimeout(function(){
+							$('.ok').toggleClass("show-tablet");
+						}, 1200);
+          }
+        });
+	});
+	$(function(){
+		let counte = 0;
+		$(document).keypress(function(e) {
+			if(e.which == 13) {
+					counte += 1;
+					if (counte == 4) {
+						$( document).unbind( "keypress" );
+						$('.ok').toggleClass("hide");
+						$('.ok').toggleClass("show-tablet");
+						setTimeout(function(){
+							$('.ok').toggleClass("show-tablet");
+						}, 1200);
+					}
+				}
+		});
+	});
+	$(".ok2").click(function(){
+		$(".ok").toggleClass("opac");
+		setTimeout(function(){
+			$(".ok").toggleClass("hide");
+			$(".ok").toggleClass("opac");
+		}, 1200);
+	});
+	$(".logo").click(function(){
+		$(".logo").removeClass("sca");
+		$(".logo").addClass("knop");
+		$(".open").addClass("opac");
+		$('.ok').toggleClass("hide");
+		$('.ok').toggleClass("show-tablet");
+		setTimeout(function(){
+			$(".open").addClass("hide");
+			$('.ok').toggleClass("show-tablet");
+		}, 1200);
+	});
+
+
 });
