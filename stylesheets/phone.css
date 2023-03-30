@@ -243,6 +243,9 @@
     color: #FF7596;
     font-style: normal;
   }
+  .ok:first-of-type p {
+    top: 36%;
+  }
   .tablet2 img, .ok2 img{
     position: absolute;
     height: 100%;

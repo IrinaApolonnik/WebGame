@@ -231,10 +231,10 @@
   }
   .ok0 {
     position:absolute;
-    width: 600%;
-    top:-200%;
+    width: 900%;
+    top:-400%;
     left:-200%;
-    height: 600%;
+    height: 800%;
     background:#FF7596;
     opacity: 0.8;
   }
@@ -291,6 +291,9 @@
     line-height: 3vw;
     color: #FF7596;
     font-style: normal;
+  }
+  .ok:first-of-type p {
+    top: 36%;
   }
   .tablet2 img, .ok2 img{
     position: absolute;
